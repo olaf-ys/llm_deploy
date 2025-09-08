@@ -1,0 +1,6 @@
+model: /root/autodl-tmp/llm_deploy/models/glm-4-9b-chat
+served-model-name: glm4-9b-chat
+host: 127.0.0.1
+port: 8000
+trust_remote_code: true
+tensor_parallel_size: 2
