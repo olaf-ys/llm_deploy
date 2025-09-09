@@ -7,7 +7,8 @@ LLM_MODELS = ["chatglm3-6b", "zhipu-api"]
 MODEL_PATH = {
     # 这里定义 本机服务器上存储的大模型权重存储路径
     "local_model": {
-        "chatglm3-6b": "/home/00_rag/model/ZhipuAI/chatglm3-6b",
+        # "chatglm3-6b": "/home/00_rag/model/ZhipuAI/chatglm3-6b",
+        "glm4-9b-chat": "/root/autodl-tmp/llm_deploy/models/glm-4-9b-chat"
 
         # 可扩展其他的开源大模型
 

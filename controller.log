@@ -1,0 +1,202 @@
+2025-09-09 19:53:28 | INFO | controller | 正在启动服务：
+2025-09-09 19:53:28 | INFO | controller | 如需查看 服务日志 日志，请前往 /root/autodl-tmp/llm_deploy/fufan-chat-api/logs
+2025-09-09 19:53:29 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m2492[0m]
+2025-09-09 19:53:29 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-09-09 19:53:29 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-09-09 19:53:29 | ERROR | stderr | [31mERROR[0m:    [Errno 99] error while attempting to bind on address ('192.168.110.131', 20001): cannot assign requested address
+2025-09-09 19:53:29 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-09-09 19:53:29 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-09-09 19:53:30 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m2542[0m]
+2025-09-09 19:53:30 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-09-09 19:53:30 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-09-09 19:53:30 | ERROR | stderr | [31mERROR[0m:    [Errno 99] error while attempting to bind on address ('192.168.110.131', 20000): cannot assign requested address
+2025-09-09 19:53:30 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-09-09 19:53:30 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-09-09 19:53:34 | ERROR | stderr | /root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/fastchat/model/model_chatglm.py:32: SyntaxWarning: invalid escape sequence '\?'
+2025-09-09 19:53:34 | ERROR | stderr |   ["\?", "？"],
+2025-09-09 19:53:34 | ERROR | stderr | Process model_worker - chatglm3-6b:
+2025-09-09 19:53:34 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/transformers/utils/hub.py", line 399, in cached_file
+2025-09-09 19:53:34 | ERROR | stderr |     resolved_file = hf_hub_download(
+2025-09-09 19:53:34 | ERROR | stderr |                     ^^^^^^^^^^^^^^^^
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+2025-09-09 19:53:34 | ERROR | stderr |     validate_repo_id(arg_value)
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+2025-09-09 19:53:34 | ERROR | stderr |     raise HFValidationError(
+2025-09-09 19:53:34 | ERROR | stderr | huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': '/home/00_rag/model/ZhipuAI/chatglm3-6b'. Use `repo_type` argument if needed.
+2025-09-09 19:53:34 | ERROR | stderr | 
+2025-09-09 19:53:34 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2025-09-09 19:53:34 | ERROR | stderr | 
+2025-09-09 19:53:34 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+2025-09-09 19:53:34 | ERROR | stderr |     self.run()
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+2025-09-09 19:53:34 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 232, in run_model_worker
+2025-09-09 19:53:34 | ERROR | stderr |     app = create_model_worker_app(log_level=log_level, **kwargs)
+2025-09-09 19:53:34 | ERROR | stderr |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 317, in create_model_worker_app
+2025-09-09 19:53:34 | ERROR | stderr |     worker = ModelWorker(
+2025-09-09 19:53:34 | ERROR | stderr |              ^^^^^^^^^^^^
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/fastchat/serve/model_worker.py", line 77, in __init__
+2025-09-09 19:53:34 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2025-09-09 19:53:34 | ERROR | stderr |                                  ^^^^^^^^^^^
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/fastchat/model/model_adapter.py", line 353, in load_model
+2025-09-09 19:53:34 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2025-09-09 19:53:34 | ERROR | stderr |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/fastchat/model/model_adapter.py", line 828, in load_model
+2025-09-09 19:53:34 | ERROR | stderr |     tokenizer = AutoTokenizer.from_pretrained(
+2025-09-09 19:53:34 | ERROR | stderr |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 817, in from_pretrained
+2025-09-09 19:53:34 | ERROR | stderr |     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+2025-09-09 19:53:34 | ERROR | stderr |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 649, in get_tokenizer_config
+2025-09-09 19:53:34 | ERROR | stderr |     resolved_config_file = cached_file(
+2025-09-09 19:53:34 | ERROR | stderr |                            ^^^^^^^^^^^^
+2025-09-09 19:53:34 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/transformers/utils/hub.py", line 463, in cached_file
+2025-09-09 19:53:34 | ERROR | stderr |     raise EnvironmentError(
+2025-09-09 19:53:34 | ERROR | stderr | OSError: Incorrect path_or_model_id: '/home/00_rag/model/ZhipuAI/chatglm3-6b'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2025-09-09 20:27:01 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 20:27:01 | ERROR | stderr |   File "<string>", line 1, in <module>
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+2025-09-09 20:27:01 | WARNING | controller | Sending SIGKILL to {'zhipu-api': <Process name='api_worker - zhipu-api (2546)' pid=2546 parent=2368 stopped exitcode=1 daemon>}
+2025-09-09 20:27:01 | ERROR | stderr |     exitcode = _main(fd, parent_sentinel)
+2025-09-09 20:27:01 | ERROR | stderr |                ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+2025-09-09 20:27:01 | WARNING | controller | Sending SIGKILL to {'chatglm3-6b': <Process name='model_worker - chatglm3-6b (2545)' pid=2545 parent=2368 stopped exitcode=1 daemon>}
+2025-09-09 20:27:01 | ERROR | stderr |     return self._bootstrap(parent_sentinel)
+2025-09-09 20:27:01 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 332, in _bootstrap
+2025-09-09 20:27:01 | ERROR | stderr |     threading._shutdown()
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/threading.py", line 1622, in _shutdown
+2025-09-09 20:27:01 | WARNING | controller | Sending SIGKILL to <Process name='controller (2492)' pid=2492 parent=2368 started daemon>
+2025-09-09 20:27:01 | WARNING | controller | Sending SIGKILL to <Process name='openai_api (2542)' pid=2542 parent=2368 stopped exitcode=1 daemon>
+2025-09-09 20:27:01 | WARNING | controller | Sending SIGKILL to <Process name='API Server' parent=2368 initial daemon>
+2025-09-09 20:27:01 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 484, in start_main_server
+2025-09-09 20:27:01 | ERROR | stderr |     e.wait()
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/managers.py", line 1096, in wait
+2025-09-09 20:27:01 | ERROR | stderr |     return self._callmethod('wait', (timeout,))
+2025-09-09 20:27:01 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/managers.py", line 821, in _callmethod
+2025-09-09 20:27:01 | ERROR | stderr |     kind, result = conn.recv()
+2025-09-09 20:27:01 | ERROR | stderr |                    ^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+2025-09-09 20:27:01 | ERROR | stderr |     buf = self._recv_bytes()
+2025-09-09 20:27:01 | ERROR | stderr |           ^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+2025-09-09 20:27:01 | ERROR | stderr |     buf = self._recv(4)
+2025-09-09 20:27:01 | ERROR | stderr |           ^^^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/connection.py", line 395, in _recv
+2025-09-09 20:27:01 | ERROR | stderr |     chunk = read(handle, remaining)
+2025-09-09 20:27:01 | ERROR | stderr |             ^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 368, in f
+2025-09-09 20:27:01 | ERROR | stderr |     raise KeyboardInterrupt(f"{signalname} received")
+2025-09-09 20:27:01 | ERROR | stderr | KeyboardInterrupt: SIGINT received
+2025-09-09 20:27:01 | ERROR | stderr | 
+2025-09-09 20:27:01 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2025-09-09 20:27:01 | ERROR | stderr | 
+2025-09-09 20:27:01 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 580, in <module>
+2025-09-09 20:27:01 | ERROR | stderr |     loop.run_until_complete(start_main_server())
+2025-09-09 20:27:01 | ERROR | stderr |                             ^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 562, in start_main_server
+2025-09-09 20:27:01 | ERROR | stderr |     p.kill()
+2025-09-09 20:27:01 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 140, in kill
+2025-09-09 20:27:01 | ERROR | stderr |     self._popen.kill()
+2025-09-09 20:27:01 | ERROR | stderr |     ^^^^^^^^^^^^^^^^
+2025-09-09 20:27:01 | ERROR | stderr | AttributeError: 'NoneType' object has no attribute 'kill'
+2025-09-09 20:27:46 | INFO | controller | 正在启动服务：
+2025-09-09 20:27:46 | INFO | controller | 如需查看 服务日志 日志，请前往 /root/autodl-tmp/llm_deploy/fufan-chat-api/logs
+2025-09-09 20:27:47 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m4382[0m]
+2025-09-09 20:27:47 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-09-09 20:27:47 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-09-09 20:27:47 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://127.0.0.1:20001[0m (Press CTRL+C to quit)
+2025-09-09 20:27:48 | INFO | controller | Register a new worker: http://127.0.0.1:21001
+2025-09-09 20:27:48 | INFO | controller | Register done: http://127.0.0.1:21001, {'model_names': ['zhipu-api'], 'speed': 1, 'queue_length': 0}
+2025-09-09 20:27:48 | INFO | stdout | [32mINFO[0m:     127.0.0.1:33770 - "[1mPOST /register_worker HTTP/1.1[0m" [32m200 OK[0m
+2025-09-09 20:27:48 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m4427[0m]
+2025-09-09 20:27:48 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-09-09 20:27:48 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-09-09 20:27:48 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://127.0.0.1:20000[0m (Press CTRL+C to quit)
+2025-09-09 20:27:50 | ERROR | stderr | Process model_worker - chatglm3-6b:
+2025-09-09 20:27:50 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/transformers/utils/hub.py", line 399, in cached_file
+2025-09-09 20:27:50 | ERROR | stderr |     resolved_file = hf_hub_download(
+2025-09-09 20:27:50 | ERROR | stderr |                     ^^^^^^^^^^^^^^^^
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+2025-09-09 20:27:50 | ERROR | stderr |     validate_repo_id(arg_value)
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 160, in validate_repo_id
+2025-09-09 20:27:50 | ERROR | stderr |     raise HFValidationError(
+2025-09-09 20:27:50 | ERROR | stderr | huggingface_hub.errors.HFValidationError: Repo id must use alphanumeric chars or '-', '_', '.', '--' and '..' are forbidden, '-' and '.' cannot start or end the name, max length is 96: ''.
+2025-09-09 20:27:50 | ERROR | stderr | 
+2025-09-09 20:27:50 | ERROR | stderr | The above exception was the direct cause of the following exception:
+2025-09-09 20:27:50 | ERROR | stderr | 
+2025-09-09 20:27:50 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+2025-09-09 20:27:50 | ERROR | stderr |     self.run()
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 108, in run
+2025-09-09 20:27:50 | ERROR | stderr |     self._target(*self._args, **self._kwargs)
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 232, in run_model_worker
+2025-09-09 20:27:50 | ERROR | stderr |     app = create_model_worker_app(log_level=log_level, **kwargs)
+2025-09-09 20:27:50 | ERROR | stderr |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 317, in create_model_worker_app
+2025-09-09 20:27:50 | ERROR | stderr |     worker = ModelWorker(
+2025-09-09 20:27:50 | ERROR | stderr |              ^^^^^^^^^^^^
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/fastchat/serve/model_worker.py", line 77, in __init__
+2025-09-09 20:27:50 | ERROR | stderr |     self.model, self.tokenizer = load_model(
+2025-09-09 20:27:50 | ERROR | stderr |                                  ^^^^^^^^^^^
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/fastchat/model/model_adapter.py", line 353, in load_model
+2025-09-09 20:27:50 | ERROR | stderr |     model, tokenizer = adapter.load_model(model_path, kwargs)
+2025-09-09 20:27:50 | ERROR | stderr |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/fastchat/model/model_adapter.py", line 88, in load_model
+2025-09-09 20:27:50 | ERROR | stderr |     tokenizer = AutoTokenizer.from_pretrained(
+2025-09-09 20:27:50 | ERROR | stderr |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 817, in from_pretrained
+2025-09-09 20:27:50 | ERROR | stderr |     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+2025-09-09 20:27:50 | ERROR | stderr |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 649, in get_tokenizer_config
+2025-09-09 20:27:50 | ERROR | stderr |     resolved_config_file = cached_file(
+2025-09-09 20:27:50 | ERROR | stderr |                            ^^^^^^^^^^^^
+2025-09-09 20:27:50 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/.venv/lib/python3.12/site-packages/transformers/utils/hub.py", line 463, in cached_file
+2025-09-09 20:27:50 | ERROR | stderr |     raise EnvironmentError(
+2025-09-09 20:27:50 | ERROR | stderr | OSError: Incorrect path_or_model_id: ''. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+2025-09-09 20:28:23 | WARNING | controller | Sending SIGKILL to {'zhipu-api': <Process name='api_worker - zhipu-api (4431)' pid=4431 parent=4267 started daemon>}
+2025-09-09 20:28:23 | WARNING | controller | Sending SIGKILL to {'chatglm3-6b': <Process name='model_worker - chatglm3-6b (4430)' pid=4430 parent=4267 stopped exitcode=1 daemon>}
+2025-09-09 20:28:23 | WARNING | controller | Sending SIGKILL to <Process name='controller (4382)' pid=4382 parent=4267 started daemon>
+2025-09-09 20:28:23 | WARNING | controller | Sending SIGKILL to <Process name='openai_api (4427)' pid=4427 parent=4267 started daemon>
+2025-09-09 20:28:23 | WARNING | controller | Sending SIGKILL to <Process name='API Server' parent=4267 initial daemon>
+2025-09-09 20:28:23 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 484, in start_main_server
+2025-09-09 20:28:23 | ERROR | stderr |     e.wait()
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/managers.py", line 1096, in wait
+2025-09-09 20:28:23 | ERROR | stderr |     return self._callmethod('wait', (timeout,))
+2025-09-09 20:28:23 | ERROR | stderr |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/managers.py", line 821, in _callmethod
+2025-09-09 20:28:23 | ERROR | stderr |     kind, result = conn.recv()
+2025-09-09 20:28:23 | ERROR | stderr |                    ^^^^^^^^^^^
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/connection.py", line 250, in recv
+2025-09-09 20:28:23 | ERROR | stderr |     buf = self._recv_bytes()
+2025-09-09 20:28:23 | ERROR | stderr |           ^^^^^^^^^^^^^^^^^^
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+2025-09-09 20:28:23 | ERROR | stderr |     buf = self._recv(4)
+2025-09-09 20:28:23 | ERROR | stderr |           ^^^^^^^^^^^^^
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/connection.py", line 395, in _recv
+2025-09-09 20:28:23 | ERROR | stderr |     chunk = read(handle, remaining)
+2025-09-09 20:28:23 | ERROR | stderr |             ^^^^^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 368, in f
+2025-09-09 20:28:23 | ERROR | stderr |     raise KeyboardInterrupt(f"{signalname} received")
+2025-09-09 20:28:23 | ERROR | stderr | KeyboardInterrupt: SIGINT received
+2025-09-09 20:28:23 | ERROR | stderr | 
+2025-09-09 20:28:23 | ERROR | stderr | During handling of the above exception, another exception occurred:
+2025-09-09 20:28:23 | ERROR | stderr | 
+2025-09-09 20:28:23 | ERROR | stderr | Traceback (most recent call last):
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 580, in <module>
+2025-09-09 20:28:23 | ERROR | stderr |     loop.run_until_complete(start_main_server())
+2025-09-09 20:28:23 | ERROR | stderr |                             ^^^^^^^^^^^^^^^^^^^
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/autodl-tmp/llm_deploy/fufan-chat-api/startup.py", line 562, in start_main_server
+2025-09-09 20:28:23 | ERROR | stderr |     p.kill()
+2025-09-09 20:28:23 | ERROR | stderr |   File "/root/miniconda3/lib/python3.12/multiprocessing/process.py", line 140, in kill
+2025-09-09 20:28:23 | ERROR | stderr |     self._popen.kill()
+2025-09-09 20:28:23 | ERROR | stderr |     ^^^^^^^^^^^^^^^^
+2025-09-09 20:28:23 | ERROR | stderr | AttributeError: 'NoneType' object has no attribute 'kill'
