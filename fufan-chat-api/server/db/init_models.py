@@ -1,7 +1,7 @@
 import asyncio
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
-from configs import SQLALCHEMY_DATABASE_URI
+from configs.kb_config import SQLALCHEMY_DATABASE_URI
 from server.db.base import Base
 import server.db.models  # 确保模型被导入以便创建表
 
