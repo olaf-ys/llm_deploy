@@ -2,7 +2,7 @@ TEMPERATURE = 0.8
 #
 # LLM_MODELS = ["chatglm3-6b", "zhipu-api"]
 
-LLM_MODELS = ["chatglm3-6b", "zhipu-api"]
+LLM_MODELS = ["glm4-9b-chat", "gpt-4"]
 
 MODEL_PATH = {
     # 这里定义 本机服务器上存储的大模型权重存储路径
@@ -25,12 +25,12 @@ MODEL_PATH = {
 
 ONLINE_LLM_MODEL = {
 
-    # 智谱清言的在线API服务
-    "zhipu-api": {
-        "api_key": "",
-        "version": "glm-4",
-        "provider": "ChatGLMWorker",
-    },
+    # # 智谱清言的在线API服务
+    # "zhipu-api": {
+    #     "api_key": "",
+    #     "version": "glm-4",
+    #     "provider": "ChatGLMWorker",
+    # },
 
     # OpenAI GPT模型的在线服务
     "openai-api": {

@@ -8,12 +8,12 @@ async def async_session_scope():
     session = AsyncSessionLocal()
     try:
         yield session
-        await session.commit()
+        await session.commit() # 将数据保存至数据库中
     except Exception as e:
-        await session.rollback()
+        await session.rollback() # 如果发生异常回滚
         raise e
     finally:
-        await session.close()
+        await session.close() # 释放数据库连接
 
 def with_async_session(f):
     @wraps(f)

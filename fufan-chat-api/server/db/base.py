@@ -10,7 +10,7 @@ async_engine = create_async_engine(
     echo=True,
 )
 
-
+# 通过 AsyncSessionLocal() 创建一个数据库会话。这个会话是与数据库交互的桥梁。
 AsyncSessionLocal = sessionmaker(bind=async_engine, class_=AsyncSession, expire_on_commit=False)
 
 Base: DeclarativeMeta = declarative_base()
